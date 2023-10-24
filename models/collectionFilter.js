@@ -75,12 +75,14 @@ function removeDuplicateObjects(array) {
     return uniqueObjects;
 }
 function SortedWithOffsetAndLimit(array, limit, offset) {
+    limit = parseInt(limit);
+    offset = parseInt(offset);
     let newArray = [];
     offset *= limit;
     for (let i = 0; i < limit; i++) {
         let item = array[i + offset];
         if (item != null) {
-            newArray.push();
+            newArray.push(item);
         }
     }
     return newArray;
